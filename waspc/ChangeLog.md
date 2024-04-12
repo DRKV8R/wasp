@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.2 (2024-04-11)
+
+### 🐞 Bug fixes
+
+- Fixed problems with Wasp's type inference in projects created using Wasp 0.13.1.
+
 ## 0.13.1 (2024-04-04)
 
 ### 🐞 Bug fixes
@@ -9,7 +15,19 @@
 
 ### 🔧 Small improvements
 
-- Improved how IDEs auto-import symbols from `wasp/*` modules.
+- Improved how IDE auto-imports symbols from the `wasp` package. If you have an existing project, add these lines to your `tsconfig.json` to getter better IDE support:
+
+  ```
+  {
+    "compilerOptions" {
+      "target": "esnext",
+      "moduleResolution": "bundler",
+      // ...
+    }
+    // ...
+  }
+  ```
+
 
 ## 0.13.0 (2024-03-18)
 
